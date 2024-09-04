@@ -5,27 +5,19 @@
     --light-ash-color: #A6A6A6;
     --very-light-ash-color: #FAFAFA;
 }
-
 *,
 *::after,
 *::before{
     box-sizing: border-box;
 }
-
 body{
     margin: 0;
     font-family: "Urbanist", sans-serif;
 }
-
-
-/* HEADER SECTION */
-
 header{
     height: auto;
     padding: 0 120px;
 }
-
-
 nav{
     display: flex;
     justify-content: space-between;
@@ -33,114 +25,84 @@ nav{
     margin-top: 44px;
     margin-bottom: 100px;
 }
-
 nav .logo{
     font-family: "Gilda Display", sans-serif;
     font-size: 28px;
     color: var(--green-color);
 }
-
-
-
 .hero-section{
+    position: relative;
     margin: 0;
     width: 100%;
 }
-
-.hero-section .text{
+.hero-section .text, 
+.hero-section .heading-text{
     position: relative;
     font-family: "Gilda Display", sans-serif;
-    font-size: 150px;
+    font-size: 10rem;
     text-align: center;
     font-weight: 400;
     color: var(--green-color);
+    margin: 0;
+    padding: 0;
 }
-
 .hero-section .heading-text{
-    /* position: relative; */
-    font-family: "Gilda Display", sans-serif;
-    font-size: 150px;
-    text-align: center;
-    font-weight: 400;
+    color: var(--dark-color);
+    margin: 0;
+    padding: 0;
 }
-
-.hero-section .header-images{
-    position: relative;
-    width: 90%;
-    margin: auto;
-    /* max-width: 600px; */
-}
-
-
 .hero-section .centered-image.one {
     position: absolute;
     width: 80%;
-    top: 0;
+    top: 290px;
     left: 0;
     z-index: 1;
     transform: translateX(15%);
 }
-
 .hero-section .centered-image.two {
     position: absolute;
-    width: 100%;
-    top: 0;
+    width: 70%;
+    top: 445px;
     left: 0;
-    transform: translateY(4.7%);
+    transform: translateX(20%);
 }
-
 .hero-section .centered-image.four {
     position: absolute;
     width: 100%;
-    top: 0;
+    top: 96px;
     left: 0;
-    transform: translateY(-29.9%);
 }
-
-
 .hero-bar{
     display: flex;
+    justify-content: center;
+    gap: 1rem;
     position: relative;
     width: 100%;
     height: 160px;
     background: var(--green-color);
     color: white;
-    margin-top: 340px;
     z-index: 4;
     align-items: center;
     padding: 40px 60px;
+    margin-top: 300px;
 }
-
-.hero-bar .content{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.hero-bar .mobile{
+    display: none;
 }
-
-.hero-bar .content .end{
-    width: 30%;
-    line-height: 1.6;
-}
-
 .hero-bar .end.center-text{
     font-family: "Gilda Display", sans-serif;
     font-size: 30px;
     text-align: center;
     font-weight: 400;
 }
-
-/* END OF HEADER SECTION */
-
 section.destination{
     padding: 100px 120px;
 }
-
 .destination-bar{
     display: flex;
     justify-content: space-between;
     margin-bottom: 60px;
 }
-
 .destination-bar .left{
     font-family: "Gilda Display", sans-serif;
     font-size: 72px;
@@ -148,15 +110,12 @@ section.destination{
     line-height: 1.2;
     width: 45%;
 }
-
-
 .destination-bar .right p{
     font-family: "Urbanist", sans-serif;
     font-size: 18px;
     font-weight: 500;
     margin: 33px;
 }
-
 .destination-bar form{
     position: relative;
 }
@@ -166,9 +125,10 @@ section.destination{
     font-weight: 400;
     background: var(--very-light-ash-color);
     border-radius: 50px;
-    border: 1px solid var(--light-ash-color);
+    border: 1px solid (--light-ash-color);
     padding: 16px 45px;
     width: 100%;
+    border-color: var(--light-ash-color);
 }
 .destination-bar form .location{
     position: absolute;
@@ -176,19 +136,10 @@ section.destination{
     top: 0;
     transform: translateY(50%);
 }
-
-.destination-bar form .search{
-    position: absolute;
-    left: 0;
-    top: 9%;
-    transform: translateX(910%);
-}
-
 .destination-content .list{
     display: flex;
     justify-content: space-between;
 }
-
 .destination-content .list .card{
     width: 31%;
     padding: 16px;
@@ -199,56 +150,46 @@ section.destination{
     box-shadow: -55.45px 50.41px 98px 0px #3736640A;
     box-shadow: 105.45px 50.41px 78.04px 0px #4d4c8a0d;
 }
-
 .destination-content .list img.dest-images{
     width: 100%;
 }
-
 .destination-content h3{
     font-family: "Urbanist", sans-serif;
     font-size: 24px;
     font-weight: 700;
 }
-
 .destination-content .location{
     position: relative;
 }
-
 .destination-content .location img{
     position: absolute;
     transform: translateX(-13%);
 }
-
 .destination-content .location p{
     padding-left: 20px;
 }
-
-/* END OF DESTINATION SECTION */
-
 section.choose-us{
     align-items: center;
     padding: 0 120px;
+    display: flex;
+    flex-direction: column;
 }
-
 .choose-us .heading{
-    margin: 60px 161px;
+    width: 80%;
     text-align: center;
 }
-
 .choose-us .heading h2{
     font-family: "Gilda Display", sans-serif;
     font-size: 72px;
     font-weight: 400;
     margin-bottom: 24px;
 }
-
 .choose-us .heading p{
     font-family: "Urbanist", sans-serif;
     font-size: 18px;
     font-weight: 500;
     line-height: 32px;
 }
-
 .choose-us .list-card{
     display: flex;
     justify-content: space-between;
@@ -256,23 +197,18 @@ section.choose-us{
     margin-bottom: 100px;
     width: 100%;
 }
-
 .choose-us .list-card .card{
     width: 32%;
     box-shadow: 10px 26px 150px 0px #4343641A;
-
 }
-
 .choose-us .list-card .card.center{
     background-color: var(--green-color);
     color: white;
 }
-
 .choose-us .list-card .card.top{
     background-color: white;
     color: var(--dark-color);
 }
-
 .choose-us .list-card .card .list-top{
     background-color: var(--green-color);
     height: 4px;
@@ -383,12 +319,6 @@ section.memorable-section{
     max-width: 100%;
     height: auto; 
 }
-footer .heading{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
 footer .heading .container{
     display: flex;
     justify-content: space-between;
@@ -425,7 +355,7 @@ footer .travel-footer{
 footer .travel-footer .left{
     width: 28%;
 }
-footer .travel-footer .left .content .h4{
+footer .travel-footer .left .h4{
     font-family: Gilda Display;
     font-size: 28px;
     font-weight: 400;
@@ -433,7 +363,7 @@ footer .travel-footer .left .content .h4{
     color: var(--green-color);
     margin-bottom: 20px;
 }
-footer .travel-footer .left .content .p{
+footer .travel-footer .left .p{
     font-family: Urbanist;
     font-size: 18px;
     font-weight: 500;
@@ -467,4 +397,347 @@ footer .menu a {
 footer .menu a:hover {
     color: #007BFF; 
 } 
+@media(max-width: 1244px){
+    .hero-section .text, 
+.hero-section .heading-text{
+    position: relative;
+    font-family: "Gilda Display", sans-serif;
+    font-size: 9rem;
+    }
+}
+@media(max-width: 1243px){
+    .hero-section .text, 
+.hero-section .heading-text{
+    font-size: 8.5rem;
+    }
+.hero-bar .end.center-text{
+    font-size: 18px;
+    }
+}
+@media(max-width: 1093px){
+    .hero-section .text, 
+    .hero-section .heading-text{
+        font-size: 7.5rem;
+    }
+    .hero-bar .end.center-text{
+        font-size: 16px;
+    }
+    .hero-bar{
+        padding: 20px 30px;
+        margin-top: 310px;
+    }
+    .hero-bar .end{
+        font-size: 15px;
+    }
+    .hero-section .centered-image.four {
+        position: absolute;
+        width: 100%;
+        top: 150px;
+        left: 0;
+    }
+    .destination-bar .left{
+        font-size: 68px;
+    }
+}
+@media(max-width:992px){
+    .hero-section .text, 
+    .hero-section .heading-text{
+        font-size: 6rem;
+    }
+    .hero-section .centered-image.four {
+        position: absolute;
+        width: 100%;
+        top: 190px;
+        left: 0;
+    }
+    .hero-bar .end{
+        font-size: 12px;
+    }
+}
+@media(max-width: 842px){
+    .hero-section .text, 
+    .hero-section .heading-text{
+        font-size: 5rem;
+    }
+}
+@media(max-width: 768px){
+    header{
+        padding: 0;
+    }
+    nav{
+        padding: 0 30px;
+    }
+    nav .logo{
+        font-weight: bolder;
+    }
+.hero-section .text, 
+.hero-section .heading-text{
+    padding: 0 30px;
+    font-size: 6rem;
+}
+.hero-section .centered-image.one{
+    top: 200px;
+}
+.hero-section .centered-image.two{
+    top: 355px;
+}
+.hero-section .centered-image.four{
+    top: 140px;
+}
+.hero-bar{
+    flex-direction: column;
+    height: 100%;
+    margin-top: 200px;
+    padding: 24px 0;
+    margin-top: 290px;
+    gap: 30px;
+}
+.hero-bar img{
+    display: none;
+}
+.hero-bar .mobile{
+    display: block;
+    width: 100%;
+}
+.hero-bar .end{
+    font-size: 18px;
+}
+.hero-bar .end.center-text{
+    font-size: 30px;
+}
+section.destination{
+    margin-top: 80px;
+    padding: 0 30px;
+}
+section .destination-bar{
+    flex-direction: column;
+}
+.destination-bar .left{
+    width: 100%;
+    font-size: 80px;
+}
+.destination-bar .right p{
+    width: 100%;
+    font-size: 35px;
+    margin: 14px 0;
+    line-height: 1.5;
+}
+.destination-bar form input{
+    height: 65px;
+}
+.destination-content .card{
+    width: 100%;
+}
+.destination-content .list{
+    flex-direction: column;
+}
+.destination-content .list .card{
+    width: 100%;
+}
+section.choose-us{
+    padding:0 30px;
+}
+.choose-us .list-card{
+    flex-direction: column;
+    width: 100%;
+    gap: 30px;
+}
+.choose-us .list-card .card{
+    width: 100%;
+}
+section.memorable-section{
+    flex-direction: column;
+    padding: 0 30px;
+}
+.documentation .wrt{
+    padding: 0 30px;
+    margin-top: 80px;
+    width: 100%;
+    font-size: 60px;
+}
+.documentation img{
+    padding: 0;
+}
+footer{
+    padding: 0 30px;
+    margin-top: 80px;
+}
+footer .heading .container{
+    width: 100%;
+    flex-direction: column;
+    padding: 0;
+    align-items: flex-start;
+}
+footer .heading h4{
+    text-align: start;
+    margin: 0;
+}
+footer .heading .button{
+    padding: 20px 45px;
+    margin-bottom: 45px;
+    margin-top: 18px;
+}
+footer .heading .container img{
+    max-width: 100%;
+}
+footer .travel-footer{
+    flex-direction: column;
+    align-items: center;
+    padding: 0 30px;
+}
+footer .travel-footer .left{
+    width: 100%;
+}
 
+footer .travel-footer .left .p{
+    font-size: 30px;
+    line-height: 1.5;
+}
+footer .travel-footer .left .social-links{
+    width: 50%;
+}
+footer .travel-footer .left{
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+}
+footer .travel-footer .left .h4{
+    align-self: flex-start;
+    font-weight: bolder;
+}
+footer .travel-footer .left img{
+    width: 30%;
+}
+footer .menu a{
+    font-size: 25px;
+}
+footer .travel-footer .right{
+    margin-top: 45px;
+}
+}
+@media(max-width:745px){
+    .hero-section .text, 
+    .hero-section .heading-text{
+        padding: 0 30px;
+        font-size: 4rem;
+    }
+    footer .menu a{
+        font-size: 18px;
+    }
+    .hero-bar .end{
+        font-size: 13px;
+    }
+    .hero-bar .end.center-text{
+        font-size: 27px;
+    }
+}
+@media(max-width: 572px){
+    .hero-section .text, 
+    .hero-section .heading-text{
+        padding: 0 30px;
+        font-size: 3.5rem;
+    }
+    .hero-bar .end{
+        font-size: 15px;
+    }
+    .hero-bar .end.center-text{
+        font-size: 30px;
+    }
+    .hero-section .centered-image.two{
+        top: 290px;
+    }
+    .documentation .wrt{
+        font-size: 55px;
+    }
+}
+@media(max-width: 560px){
+    .hero-section .text, 
+    .hero-section .heading-text{
+        font-size: 3rem;
+    }
+    .hero-bar .end{
+        font-size: 13px;
+    }
+    .hero-bar .end.center-text{
+        font-size: 27px;
+    }
+    .hero-section .centered-image.two{
+        top: 290px;
+    }
+    .documentation .wrt{
+        font-size: 55px;
+    }
+    .destination-bar .lef{
+        font-size: 60px;
+    }
+    .hero-section .centered-image.one{
+        top: 220px;
+    }
+    .hero-section .centered-image.two{
+        top: 375px;
+    }
+    footer .menu a{
+        font-size: 11px;
+    } 
+    footer .travel-footer .left .p {
+        font-size: 20px;
+    }
+    .destination-bar .left{
+        font-size: 50px;
+    }
+    .destination-bar .right p{
+        font-size: 20px;
+    }
+    .choose-us .heading h2{
+        font-size: 55px;
+    }
+    .memorable-section .left .content .h4{
+        font-size: 45px;
+    }
+}
+@media(max-width: 425px){
+    .hero-section .text, 
+    .hero-section .heading-text{
+        font-size: 40px;
+    }
+    .hero-section .centered-image.one{
+        top: 90px;
+    }
+    .hero-section .centered-image.two{
+        top: 149px;
+    }
+    .hero-section .centered-image.four{
+        top: 15px;
+    }
+    .hero-bar{
+        margin-top: 150px;
+    }
+    .hero-bar .end{
+        font-size: 11px;
+    }
+    footer .menu li{
+        display: inline-flex;
+        gap: 10px;
+        padding: 0;
+    }
+    footer .menu a{
+        font-size: 12px;
+    }
+    footer .heading h4{
+        font-size: 40px;
+    }
+}
+@media(max-width: 375px){
+        .documentation .wrt{
+            font-size: 40px;
+        }
+    .hero-bar .end.left-text{
+        font-size: 9px;
+    }
+}
+@media(max-width: 370px){
+    .hero-section .text, 
+    .hero-section .heading-text{
+        font-size: 30px;
+    }
+}
